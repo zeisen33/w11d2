@@ -1,18 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-export class ClockToggle extends React.Component {
-  render () {
-    return (
-      <button 
-        type="button"
-        className="clock-toggle" 
-        onClick={this.props.toggleClock}
-      >
-        Toggle Clock
-      </button>
-    )
-  }
-} 
+function ClockToggle(props) {
+  return (
+    <button
+      type="button"
+      className="clock-toggle"
+      onClick={this.props.toggleClock}
+    >
+      Toggle Clock
+    </button>
+  )
+}
+
+
+// export class ClockToggle extends React.Component {
+//   render () {
+//     return (
+//       <button 
+//         type="button"
+//         className="clock-toggle" 
+//         onClick={this.props.toggleClock}
+//       >
+//         Toggle Clock
+//       </button>
+//     )
+//   }
+// } 
+
+function Clock(props) {
+
+  const [timeData, setTime] = useState(new Date()) 
+}
 
 class Clock extends React.Component {
   constructor(props) {
